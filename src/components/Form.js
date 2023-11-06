@@ -8,7 +8,8 @@ const Form = ({todo,setTodo, todoList, setTodoList}) => {
     const handleSubmit =(event)=>{
         event.preventDefault();
         setTodoList([...todoList, {name: todo, id: shortid.generate() }]);
-        console.log(todoList);
+        // console.log(todoList);
+        setTodo("");
     };
     return(
         <div className={styles.todoform}>
